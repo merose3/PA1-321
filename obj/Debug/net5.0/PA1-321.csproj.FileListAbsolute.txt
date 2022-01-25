@@ -1,0 +1,15 @@
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/PA1-321.deps.json
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/PA1-321.runtimeconfig.json
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/PA1-321.runtimeconfig.dev.json
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/PA1-321.dll
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/ref/PA1-321.dll
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/bin/Debug/net5.0/PA1-321.pdb
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.csproj.AssemblyReference.cache
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.AssemblyInfoInputs.cache
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.AssemblyInfo.cs
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.csproj.CoreCompileInputs.cache
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.dll
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/ref/PA1-321.dll
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.pdb
+/Users/maryjane/Desktop/Source/MIS321/PA1-321/obj/Debug/net5.0/PA1-321.genruntimeconfig.cache
