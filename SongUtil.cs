@@ -23,13 +23,13 @@ namespace PA1_321
             // {
             //     return x.Date.CompareTo(y.Date);
             // });
-            Console. ForegroundColor = ConsoleColor. Green;
-            Console.WriteLine("****Sorted in descending order****");
-            Console. ForegroundColor = ConsoleColor. White;
-            var dateOrder = songs.OrderByDescending(e => e.Date);
-            foreach (var theSongs in dateOrder)
+            Console. ForegroundColor = ConsoleColor. Green; //changes color to green for the sign directing user of how songs are showed
+            Console.WriteLine("****Sorted in descending date order****");
+            Console. ForegroundColor = ConsoleColor. White; //color back to white
+            var dateOrder = songs.OrderByDescending(e => e.Date); //creates a variable of how the songs are ordered by 
+            foreach (var theSongs in dateOrder) //goes through all the songs in the variable to show user 
             {
-                Console.WriteLine(theSongs);
+                Console.WriteLine(theSongs); //physically writing them out 
             }
         }
         public void AddSong()
@@ -40,7 +40,7 @@ namespace PA1_321
             System.Console.WriteLine("Please enter the name of the song you would like to add");
             string newSong = Console.ReadLine();
             var currDate = DateTime.Now; //date is correct 
-            songs.Add(new Song(){ID = guid, Title = newSong, Date = currDate}); //this is a way to add a new song to the list created []
+            songs.Add(new Song(){ID = guid, Title = newSong, Date = currDate}); //this is a way to add a new song to the list created 
             
             StreamWriter outfile = new StreamWriter("songs.txt");
             foreach(Song song in songs)
