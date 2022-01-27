@@ -20,14 +20,16 @@ namespace PA1_321
                 switch(userChoice)
                 {
                     case 1: //This is to view all songs
-                        List<Song> songs = SongFile.GetSongs();
-                        SongUtil.PrintAllSongs(songs); 
+                        // List<Song> songs = SongFile.GetSongs();
+                        SongUtil util = new SongUtil();
+                        util.PrintSongOrder(); 
                         break;
                     case 2: //this is to add a song
                         manipulation.AddSong();
                         break;
                     case 3: //this is to delete a song
-                        
+                        List<Song> songies = SongFile.GetSongs();
+                        manipulation.DeleteSong(songies);
                         break;
                     default: //get me out of the system 
                         System.Console.WriteLine("Invalid Option"); 
