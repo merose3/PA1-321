@@ -20,7 +20,6 @@ namespace PA1_321
                 switch(userChoice)
                 {
                     case 1: //This is to view all songs
-                        // List<Song> songs = SongFile.GetSongs();
                         SongUtil util = new SongUtil();
                         util.PrintSongOrder(); 
                         break;
@@ -35,7 +34,7 @@ namespace PA1_321
                         System.Console.WriteLine("Invalid Option"); 
                         break;
                 }
-            System.Console.WriteLine("Please pick if you would like to: \n 1) View all songs \n 2) Add a song \n 3) Delete a song by ID \n 4) Exit the system"); 
+            System.Console.WriteLine("Please pick if you would like to: \n 1) View all songs \n 2) Add a song \n 3) Delete a song by Name \n 4) Exit the system"); 
             userChoice = int.Parse(Console.ReadLine()); 
             }
             Console.WriteLine("You will now exit the system");

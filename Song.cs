@@ -25,6 +25,11 @@ namespace PA1_321
         {
             return ID + "#" + Title + "#" + Date + "#" + Deleted;
         }
+        public string ToFileDeleted()
+        {
+            Deleted = true;
+            return ID + "#" + Title + "#" + Date + "#" + Deleted;
+        }
         public int CompareTo(Song compareSong)
         {
             return this.Date.CompareTo(this.Date);
