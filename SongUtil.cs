@@ -12,7 +12,7 @@ namespace PA1_321
         {
             foreach(Song song in songs)
             {
-                if(song.Deleted == false)
+                if(song.Deleted == false) //Filters out the songs that haven't been soft deleted 
                 {
                     System.Console.WriteLine(song.ToString());
                 }
@@ -31,7 +31,7 @@ namespace PA1_321
         }
         public void AddSong()
         {
-            List<Song> songs = SongFile.GetSongs();
+            List<Song> songs = SongFile.GetSongs(); //pulls the songs in for use 
             Guid guid = Guid.NewGuid(); //guid is working 
             System.Console.WriteLine("The ID of your new song is: " + guid);
             System.Console.WriteLine("Please enter the name of the song you would like to add");
@@ -39,14 +39,14 @@ namespace PA1_321
             var currDate = DateTime.Now; //date is correct 
             songs.Add(new Song(){ID = guid, Title = newSong, Date = currDate}); //this is a way to add a new song to the list created 
             
-            StreamWriter outfile = new StreamWriter("songs.txt");
+            StreamWriter outfile = new StreamWriter("songs.txt"); //ope file 
             foreach(Song song in songs)
             {
-                outfile.WriteLine(song.ToFile());
+                outfile.WriteLine(song.ToFile()); //writing the songs to the file
             }
-            outfile.Close();
+            outfile.Close(); //close file 
         }
-        public void DeleteSong(List<Song> songs) //do a soft delete 
+        public void DeleteSong(List<Song> songs) //soft delete
         {
             string userInput = GetExistingSongByTitle(songs); //be careful that the song actually exists
             if(userInput == "0")
@@ -59,17 +59,17 @@ namespace PA1_321
             {
                 if(song.Title == userInput)
                 {
-                    outFile.WriteLine(song.ToFileDeleted()); 
+                    outFile.WriteLine(song.ToFileDeleted()); //changes the bool to make it true
                 }
                 else
                 {
-                    outFile.WriteLine(song.ToFile());
+                    outFile.WriteLine(song.ToFile()); //writes to file as normal
                 }
             }
             outFile.Close();
         }
 
-        public string GetExistingSongByTitle(List<Song> songs)
+        public string GetExistingSongByTitle(List<Song> songs) //Checks to see if the song title exists 
         {
             // PrintAllSongs(songs);
             PrintSongOrder();
