@@ -34,5 +34,9 @@ namespace PA1_321
         {
             return this.Date.CompareTo(this.Date);
         }
+        public static int CompareByDate(Song x, Song y)
+        {
+            return x.Title.CompareTo(y.Title);
+        }
     }
 }

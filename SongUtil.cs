@@ -26,7 +26,8 @@ namespace PA1_321
             Console. ForegroundColor = ConsoleColor. Green; //changes color to green for the sign directing user of how songs are showed
             Console.WriteLine("****Sorted in descending date order****");
             Console. ForegroundColor = ConsoleColor. White; //color back to white
-            var dateOrder = songs.OrderByDescending(e => e.Date); //creates a variable of how the songs are ordered by 
+            songs.Sort();
+            songs.Reverse();
             PrintAllSongs(songs);
         }
         public void AddSong()
@@ -53,7 +54,8 @@ namespace PA1_321
             {
                 return; //this returns nothing and they will leave the system
             }
-            songs.Sort();
+            // songs.Sort();
+            PrintSongOrder();
             StreamWriter outFile = new StreamWriter("songs.txt");
             foreach(Song song in songs) //this deletes everything in the file...
             {
