@@ -36,7 +36,7 @@ namespace PA1_321
         }
         public static int CompareByDate(Song x, Song y)
         {
-            return x.Title.CompareTo(y.Title);
+            return y.Date.CompareTo(x.Date);
         }
     }
 }

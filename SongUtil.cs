@@ -26,8 +26,7 @@ namespace PA1_321
             Console. ForegroundColor = ConsoleColor. Green; //changes color to green for the sign directing user of how songs are showed
             Console.WriteLine("****Sorted in descending date order****");
             Console. ForegroundColor = ConsoleColor. White; //color back to white
-            songs.Sort();
-            songs.Reverse();
+            songs.Sort(Song.CompareByDate);
             PrintAllSongs(songs);
         }
         public void AddSong()
