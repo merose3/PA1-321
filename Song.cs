@@ -19,7 +19,8 @@ namespace PA1_321
         
         public override string ToString()
         {
-            return this.Title + " was added on " + this.Date;
+            // return this.Title + " was added on " + this.Date;
+            return "Song ID: " + ID + "\nSong Title: " + Title + "\nDate Added: " + Date + "\n";
         }
          public string ToFile()
         {
