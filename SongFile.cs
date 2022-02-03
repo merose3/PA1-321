@@ -25,10 +25,10 @@ namespace PA1_321
             while(line != null)
             {
                 string [] temp = line.Split("#"); //pulls everything in as a string 
-                Guid tempID = Guid.Parse(temp[0]); //parsing the song ID
+                // Guid tempID = Guid.Parse(temp[0]); //parsing the song ID
                 DateTime date = DateTime.Parse(temp[2]);
                 bool delete = bool.Parse(temp[3]);
-                songList.Add(new Song(){ID = tempID, Title = temp[1], Date = date, Deleted = delete}); //this is a way to add a new song to the list created 
+                songList.Add(new Song(){ID = temp[0], Title = temp[1], Date = date, Deleted = delete}); //this is a way to add a new song to the list created 
                 line = infile.ReadLine(); //update read 
                
             }

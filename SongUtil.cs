@@ -33,11 +33,13 @@ namespace PA1_321
         {
             List<Song> songs = SongFile.GetSongs(); //pulls the songs in for use 
             Guid guid = Guid.NewGuid(); //guid is working 
-            System.Console.WriteLine("The ID of your new song is: " + guid);
+            string newID = Convert.ToBase64String(guid.ToByteArray());
+
+            System.Console.WriteLine("The ID of your new song is: " + newID);
             System.Console.WriteLine("Please enter the name of the song you would like to add");
             string newSong = Console.ReadLine();
             var currDate = DateTime.Now; //date is correct 
-            songs.Add(new Song(){ID = guid, Title = newSong, Date = currDate}); //this is a way to add a new song to the list created 
+            songs.Add(new Song(){ID = newID, Title = newSong, Date = currDate}); //this is a way to add a new song to the list created 
             
             StreamWriter outfile = new StreamWriter("songs.txt"); //ope file 
             foreach(Song song in songs)
@@ -58,7 +60,7 @@ namespace PA1_321
             StreamWriter outFile = new StreamWriter("songs.txt");
             foreach(Song song in songs) //this deletes everything in the file...
             {
-                if(song.Title == userInput)
+                if(song.ID == userInput)
                 {
                     outFile.WriteLine(song.ToFileDeleted()); //changes the bool to make it true
                 }
@@ -74,23 +76,23 @@ namespace PA1_321
         {
             // PrintAllSongs(songs);
             PrintSongOrder();
-            System.Console.WriteLine("\nPlease enter the name of the song you would like to delete and if there are none please press 0 to exit");
-            string targetSongTitle = Console.ReadLine();
+            System.Console.WriteLine("\nPlease enter the ID of the song you would like to delete and if there are none please press 0 to exit");
+            string targetSongID = Console.ReadLine();
             bool found = false; //boolean 
-            while(!found && targetSongTitle != "0") //not "or"
+            while(!found && targetSongID != "0") //not "or"
             {
                 foreach(Song song in songs)
                 {
-                    if(song.Title == targetSongTitle)
+                    if(song.ID == targetSongID)
                     {
                         found = true;
-                        return targetSongTitle;
+                        return targetSongID;
                     }
                 }
                 PrintSongOrder();
                 System.Console.WriteLine("\nInvalid title entered. Please enter another title");
                 System.Console.WriteLine("If you want to exit, please enter 0");
-                targetSongTitle = Console.ReadLine();
+                targetSongID = Console.ReadLine();
             }
             return "0";
         }

@@ -7,7 +7,7 @@ namespace PA1_321
 {
     public class Song : IComparable<Song>
     {
-        public Guid ID { get; set; }
+        public string ID { get; set; }
         public string Title { get; set; }
         public DateTime Date { get; set; }
         public bool Deleted { get; set; }
